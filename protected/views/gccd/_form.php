@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Codigo'); ?>
-		<?php echo $form->textField($model,'GCCD_Id'); ?>
+		<?php echo $form->textField($model,'Codigo'); ?>
 		<?php echo $form->error($model,'GCCD_Id'); ?>
 	</div>
 
