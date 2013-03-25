@@ -27,7 +27,7 @@ class PcucController extends Controller
 		//Buscar la primera fila que arroje el sql ingresado
 		#$pcuc = Pcuc::model()->find("");
 
-                $this->render('index', array('pcca'=>$pcca));
+                $this->render('index', array('pccas'=>$pcca));
 		//$this->render('index', array('pcucs'=>$pcucs));
 
 
@@ -36,12 +36,12 @@ class PcucController extends Controller
 	public function actionView($id){
 
 		
-//                $pcuc=pcuc::model()->find("PCUC_Id = ".$id."");
-//		$pcuds=pcud::model()->findAll("PCUC_Id = ".$id."");
-//		$pcud=pcud::model()->find("PCUC_Id = ".$id."");
-//                
+                $pcuc=pcuc::model()->find("PCUC_Id = ".$id."");
+		$pcuds=pcud::model()->findAll("PCUC_Id = ".$id."");
+		$pcud=pcud::model()->find("PCUC_Id = ".$id."");
+                
 				
-            // $this->render('view', array('pcuc'=>$pcuc,'pcuds'=>$pcuds,'pcud'=>$pcud));
+             $this->render('view', array('pcuc'=>$pcuc,'pcuds'=>$pcuds,'pcud'=>$pcud));
 	}
 
 	public function actionAdd(){
