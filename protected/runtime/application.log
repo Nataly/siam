@@ -5020,3 +5020,21 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
 ---
+2013/03/25 13:18:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "prueba.php" solicitada.' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('prueba.php')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('prueba.php')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('pcuc/prueba.php')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/siam/pcuc/prueba.php
+---
+2013/03/25 13:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/img/icons/favicodn.ico"' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/i...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
+---
