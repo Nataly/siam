@@ -17,14 +17,19 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
                     'items'=>array(
-                        /*array('label'=>'Dashboard', 'url'=>array('/site/index')),
+                        array('label'=>'Objetos <span class="caret"></span>', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
+                        'items'=>array(
+                            array('label'=>'Dashboard', 'url'=>array('/site/index')),
                         array('label'=>'Graphs & Charts', 'url'=>array('/site/page', 'view'=>'graphs')),
                         array('label'=>'Forms', 'url'=>array('/site/page', 'view'=>'forms')),
                         array('label'=>'Tables', 'url'=>array('/site/page', 'view'=>'tables')),
-						array('label'=>'Interface', 'url'=>array('/site/page', 'view'=>'interface')),
+                        array('label'=>'Interface', 'url'=>array('/site/page', 'view'=>'interface')),
                         array('label'=>'Typography', 'url'=>array('/site/page', 'view'=>'typography')),
-                        array('label'=>'Gii generated', 'url'=>array('customer/index')),*/
-                        array('label' => 'Eventos', 'url' => array('/saludo/index'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Gii generated', 'url'=>array('customer/index')),
+                        )),
+
+                        /**/
+                        array('label' => 'Eventos', 'url' => array('/pcuc/index'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label' => 'Grupos', 'url' => array('/gccd/admin'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label' => 'Usuarios', 'url' => array('/saludo/index'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label' => 'Conexiones', 'url' => array('/saludo/index'), 'visible'=>!Yii::app()->user->isGuest),
@@ -33,7 +38,7 @@
                    
                         array('label'=>'Mi Cuenta <span class="caret"></span>', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
                         'items'=>array(
-                            array('label'=>'Mis Mensajes <span class="badge badge-warning pull-right">26</span>', 'url'=>'#'),
+                            array('label'=>'Mensajes <span class="badge badge-warning pull-right">26</span>', 'url'=>'#'),
 							array('label'=>'Alertas <span class="badge badge-important pull-right">112</span>', 'url'=>'#'),
 							array('label'=>'Informacion <span class="badge badge-info pull-right">12</span>', 'url'=>'#'),
 							//array('label'=>'Separated link', 'url'=>'#'),
