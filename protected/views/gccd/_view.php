@@ -6,7 +6,7 @@
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('GCCD_Id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->GCCD_Id), array('view', 'id'=>$data->GCCD_Id)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->GCCD_Cod), array('view', 'id'=>$data->GCCD_Id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('GCCD_Nombre')); ?>:</b>
