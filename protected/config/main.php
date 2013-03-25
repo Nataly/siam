@@ -11,7 +11,7 @@ return array(
 	'language'=>'es',
 	'sourceLanguage'=>'en',
 	'charset'=>'utf-8',
-	'theme'=>'classic',
+	'theme'=>'abound',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
