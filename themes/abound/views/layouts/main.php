@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>abound - Yii theme</title>
+    <title>Siam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free yii themes, free web application theme">
     <meta name="author" content="Webapplicationthemes.com">
