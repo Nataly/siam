@@ -19,7 +19,7 @@
                     'items'=>array(
                         array('label'=>'Objetos <span class="caret"></span>', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
                         'items'=>array(
-                            array('label'=>'Dashboard', 'url'=>array('/site/index')),
+                            array('label'=>'Dashboard', 'url'=>array('/site/page', 'view'=>'graphs')),
                         array('label'=>'Graphs & Charts', 'url'=>array('/site/page', 'view'=>'graphs')),
                         array('label'=>'Forms', 'url'=>array('/site/page', 'view'=>'forms')),
                         array('label'=>'Tables', 'url'=>array('/site/page', 'view'=>'tables')),
@@ -30,11 +30,11 @@
 
                         /**/
                         array('label' => 'Eventos', 'url' => array('/pcuc/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label' => 'Grupos', 'url' => array('/gccd/admin'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label' => 'Usuarios', 'url' => array('/saludo/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label' => 'Conexiones', 'url' => array('/saludo/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label' => 'Contabilidad', 'url' => array('/saludo/index'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label' => 'Reportes', 'url' => array('/saludo/index'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label' => 'Grupos', 'url' => array('/gccd/index'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label' => 'Usuarios', 'url'=>array('/site/page', 'view'=>'graphs'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label' => 'Conexiones', 'url'=>array('/site/page', 'view'=>'graphs'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label' => 'Contabilidad', 'url'=>array('/site/page', 'view'=>'graphs'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label' => 'Reportes', 'url'=>array('/site/page', 'view'=>'graphs'), 'visible'=>!Yii::app()->user->isGuest),
                    
                         array('label'=>'Mi Cuenta <span class="caret"></span>', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
                         'items'=>array(

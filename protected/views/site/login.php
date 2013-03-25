@@ -44,7 +44,13 @@ $this->pageTitle=Yii::app()->name . ' - Inicio';
 		<?php echo $form->label($model,'rememberMe'); ?>
 		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
-
+<?php if(Yii::app()->user->hasFlash('contact')): ?>
+ 
+<div class="flash-success">
+    <?php echo Yii::app()->user->getFlash('contact'); ?>
+</div>
+ 
+<?php endif; ?>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
