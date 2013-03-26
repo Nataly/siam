@@ -1,80 +1,56 @@
-<style>
-.alternar:hover{ background-color:#B9F8F8;}
-</style>
-<div class="view">
-<table >
-	<tr>
-		<th>Eventos</th>
-	</tr>
-<tr >
 
-	<th>Codigo</th>
-	<th>Tempo</th>
-	<th>EquipoH</th>
-	<th>EquipoA</th>
-	<th>Grupo</th>
-	<th>Estado</th>
-	<th>ResulH</th>
-	<th>ResulA</th>
-</tr>
+<?php if($pcuc->PCUC_Estado == "pro") {
+		$estado="PROGRAMADO";
+		 }
+                 ?>
 
-	<tr>
-		<td><?php echo $pcuc->PCUC_Id   ?></td>
-		<td><?php echo $pcuc->PCUC_Tiempo   ?></td>
-		<td><?php echo $pcuc->pCCNIdH->PCCN_Nombre;?></td>
-		<td><?php echo $pcuc->pCCNIdA->PCCN_Nombre;?></td>
-		<td><?php echo $pcuc->pCCS->pCCI->PCCI_Nombre;?></td>
+<?php if($pcuc->PCUC_ResultadoH == -1) { 
+		$resulH=" ";
+		}else{ 
+	$resulH=$pcuc->PCUC_ResultadoH;
+		} ?>
+<?php if($pcuc->PCUC_ResultadoA == -1) { 
+		$resulA=" ";
+		}else{ 
+	$resulA=$pcuc->PCUC_ResultadoA;
+		} ?>
 
-		<?php if($pcuc->PCUC_Estado == "pro") { ?>
-				<td><?php echo "PROGRAMADO"; ?></td>
-		<?php } ?>
-
-		<?php if($pcuc->PCUC_ResultadoH == -1) { ?>
-				<td><?php  ?></td>
-		<?php }else{ ?>
-				<td><?php echo $pcuc->PCUC_ResultadoH; ?></td>
-		<?php } ?>
-
-		<?php if($pcuc->PCUC_ResultadoA == -1) { ?>
-				<td><?php  ?></td>
-		<?php }else { ?>
-				<td><?php echo $pcuc->PCUC_ResultadoA; ?></td>
-		<?php  } ?>	
-	</tr>
-
-</table>
-	
-
-<div class="view2">
 <?php
-	echo CHtml::link(CHtml::radioButtonList('index','',array('0'=>'Manual','1'=>'Automatico'),array('separator'=>' ')),array('#')); 
-		
-if($pcud!==null ) { ?>
+$gridDataProvider = new CArrayDataProvider(array(
+    array('id'=>$pcuc->PCUC_Id, 'Tempo'=>$pcuc->PCUC_Tiempo , 'EquipoH'=>$pcuc->pCCNIdH->PCCN_Nombre,  'EquipoA'=>$pcuc->pCCNIdA->PCCN_Nombre,'Estado'=>$estado,'ResulH'=>$resulH,'ResulA'=>$resulA),
+));
+?>
 
-<table >
-	<tr>
-		<th>LOGROS   <?=$pcud->pCUU->PCUU_Nombre; ?></th>
-	</tr>
-<tr >
-	<th>Tiempo</th>
-	<th>O1</th>
-	<th>O2</th>
-	<th>O3</th>
-</tr>
-<?php foreach($pcuds as $pcud){?>
-	<tr class="alternar" >
-		<td><?php echo $pcud->PCUD_Tiempo; ?></td>
-		<td><?php echo $pcud->PCUD_O1; ?></td>
-		<td><?php echo $pcud->PCUD_O2; ?></td>
-		<td><?php echo $pcud->PCUD_O3; ?></td>
-	</tr>
-<?php } ?>
-</table>
-
-<?php }else { 
-		echo "No se poseen LOGROS asignados a este evento"; } ?>
+<div class="page-header">
+  <h1>Evento <small>Logros</small></h1>
 </div>
 
-	<?php echo CHtml::link('Atras',array('index')); ?>
+<?php
+		$this->beginWidget('zii.widgets.CPortlet', array(
+			'title'=>$pcuc->pCCS->pCCI->pCCT->PCCT_Nombre."-".$pcuc->pCCS->PCCS_Nombre,
+		));		
+?>
 
-</div>
+<?php 
+
+$this->widget('zii.widgets.grid.CGridView', array(
+			/*'type'=>'striped bordered condensed',*/
+			'itemsCssClass'=>'table table-hover table-striped table-bordered table-condensed',
+			'dataProvider'=>$gridDataProvider,
+			'template'=>"{items}",
+			'columns'=>array(
+				array('name'=>'id', 'header'=>'Codigo'),
+				array('name'=>'Tempo', 'header'=>'Tempo'),
+				array('name'=>'EquipoH', 'header'=>'EquipoH'),
+				array('name'=>'EquipoA', 'header'=>'EquipoA'),
+                                array('name'=>'Estado', 'header'=>'Estado'),
+                                array('name'=>'ResulH', 'header'=>'ResulH'),
+                                array('name'=>'ResulA', 'header'=>'ResulA'),
+				
+			),
+                        
+		)); ?>
+<?php 
+$this->endWidget();
+?>
+
