@@ -10897,6 +10897,7 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
 ---
+<<<<<<< HEAD
 2013/03/27 13:12:36 [error] [php] Undefined variable: deporte (E:\xampp\htdocs\siam\protected\views\pcuc\index.php:15)
 Stack trace:
 #0 E:\xampp\htdocs\yii\framework\web\CController.php(869): PcucController->renderFile()
@@ -10914,3 +10915,30 @@ REQUEST_URI=/siam/pcuc/
 in E:\xampp\htdocs\siam\protected\views\pcuc\index.php (15)
 in E:\xampp\htdocs\siam\protected\controllers\PcucController.php (38)
 in E:\xampp\htdocs\siam\index.php (13)
+=======
+<<<<<<< HEAD
+2013/03/27 20:27:37 [error] [php] Undefined variable: deporte (C:\xampp\htdocs\siam\protected\views\pcuc\index.php:15)
+=======
+2013/03/27 20:23:35 [error] [php] Undefined variable: deporte (C:\xampp\htdocs\siam\protected\views\pcuc\index.php:15)
+>>>>>>> origin/master
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): PcucController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): PcucController->renderPartial()
+#2 C:\xampp\htdocs\siam\protected\controllers\PcucController.php(38): PcucController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PcucController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): PcucController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): PcucController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PcucController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siam\index.php(13): CWebApplication->run()
+<<<<<<< HEAD
+REQUEST_URI=/siam/pcuc/
+=======
+REQUEST_URI=/siam/pcuc
+>>>>>>> origin/master
+in C:\xampp\htdocs\siam\protected\views\pcuc\index.php (15)
+in C:\xampp\htdocs\siam\protected\controllers\PcucController.php (38)
+in C:\xampp\htdocs\siam\index.php (13)
+>>>>>>> 819a6c3cc42a978318a8031f5b21140bc4aa499c
