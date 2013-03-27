@@ -9159,3 +9159,82 @@ Stack trace:
 REQUEST_URI=/siam/gccd/create.html
 HTTP_REFERER=http://localhost/siam/gccd/admin.html
 ---
+2013/03/26 15:26:21 [error] [exception.CException] exception 'CException' with message 'Propiedad "Gccd"."Codigo" no se encuentra definida.' in E:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('Codigo')
+#1 E:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('Codigo')
+#2 E:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Gccd), 'Codigo')
+#3 E:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Gccd), 'Codigo', Array)
+#4 E:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Gccd), 'Codigo', Array)
+#5 E:\xampp\htdocs\siam\protected\views\gccd\_form.php(20): CActiveForm->textField(Object(Gccd), 'Codigo')
+#6 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#9 E:\xampp\htdocs\siam\protected\views\gccd\create.php(18): CController->renderPartial('_form', Array)
+#10 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#11 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#12 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 E:\xampp\htdocs\siam\protected\controllers\GccdController.php(79): CController->render('create', Array)
+#15 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): GccdController->actionCreate()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gccd/create')
+#26 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/siam/gccd/create.html
+HTTP_REFERER=http://localhost/siam/gccd/admin.html
+---
+2013/03/26 15:34:41 [error] [exception.CException] exception 'CException' with message 'Propiedad "Gccd"."Codigo" no se encuentra definida.' in E:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('Codigo')
+#1 E:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('Codigo')
+#2 E:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Gccd), 'Codigo')
+#3 E:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Gccd), 'Codigo', Array)
+#4 E:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Gccd), 'Codigo', Array)
+#5 E:\xampp\htdocs\siam\protected\views\gccd\_form.php(20): CActiveForm->textField(Object(Gccd), 'Codigo')
+#6 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#9 E:\xampp\htdocs\siam\protected\views\gccd\update.php(21): CController->renderPartial('_form', Array)
+#10 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#11 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#12 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#14 E:\xampp\htdocs\siam\protected\controllers\GccdController.php(103): CController->render('update', Array)
+#15 [internal function]: GccdController->actionUpdate('1')
+#16 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(GccdController), Array)
+#17 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(GccdController), Object(ReflectionMethod), Array)
+#18 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#27 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gccd/update')
+#28 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/siam/gccd/update/1.html
+HTTP_REFERER=http://localhost/siam/gccd/1.html
+---
+2013/03/26 16:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "siam/site/login"' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('siam/site/login')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/siam/site/login.html
+HTTP_REFERER=http://192.168.2.109/siam/site/
+---
