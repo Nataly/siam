@@ -9445,3 +9445,19 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
 ---
+2013/03/27 09:13:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/img/icons/favicodn.ico"' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/i...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
+---
+2013/03/27 14:50:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/img/icons/favicodn.ico"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
+---
