@@ -13,7 +13,7 @@
 				//array('label'=>'<i class="icon icon-search"></i> About this theme <span class="label label-important pull-right">HOT</span>', 'url'=>'http://www.webapplicationthemes.com/abound-yii-framework-theme/'),
 				//array('label'=>'<i class="icon icon-envelope"></i> Messages <span class="badge badge-success pull-right">12</span>', 'url'=>'#'),
 				// Include the operations menu
-				array('label'=>'OPERACIONES','items'=>$this->menu),
+				array('label'=>'OPERACIONES','items'=>$this->menu,'itemOptions'=>array('style'=>'width:268px; top:100px;position:fixed;')),
 			),
 			));?>
 		</div>
