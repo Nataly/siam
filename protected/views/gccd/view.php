@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar Grupo', 'url'=>array('index')),
+	array('label'=>'Listar Grupo', 'url'=>array('index'),'itemOptions'=>array('style'=>'width:268px; position:fixed;')),
 	array('label'=>'Crear Grupo', 'url'=>array('create')),
 	array('label'=>'Actualizar Grupo', 'url'=>array('update', 'id'=>$model->GCCD_Id)),
 	array('label'=>'Borrar Grupo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->GCCD_Id),'confirm'=>'Are you sure you want to delete this item?')),

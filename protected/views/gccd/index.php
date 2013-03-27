@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Crear Grupo', 'url'=>array('create')),
-	array('label'=>'Administrar Grupo', 'url'=>array('admin')),
+	array('label'=>'Crear Grupo', 'url'=>array('create'),'itemOptions'=>array('style'=>'width:268px; top:140px;position:fixed;')),
+	array('label'=>'Administrar Grupo', 'url'=>array('admin'),'itemOptions'=>array('style'=>'width:268px; top:185px;position:fixed;')),
 );
 ?>
 
