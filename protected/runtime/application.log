@@ -10703,3 +10703,44 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
 ---
+2013/03/27 18:35:26 [error] [php] Undefined variable: deporte (C:\xampp\htdocs\siam\protected\views\pcuc\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): PcucController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): PcucController->renderPartial()
+#2 C:\xampp\htdocs\siam\protected\controllers\PcucController.php(38): PcucController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PcucController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): PcucController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): PcucController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PcucController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siam\index.php(13): CWebApplication->run()
+REQUEST_URI=/siam/pcuc/index.html
+in C:\xampp\htdocs\siam\protected\views\pcuc\index.php (15)
+in C:\xampp\htdocs\siam\protected\controllers\PcucController.php (38)
+in C:\xampp\htdocs\siam\index.php (13)
+2013/03/27 18:35:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/img/icons/favicodn.ico"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
+---
+2013/03/27 18:35:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/img/icons/favicodn.ico"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
+---
+2013/03/27 18:35:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/img/icons/favicodn.ico"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
+---
