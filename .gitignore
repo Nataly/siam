@@ -12,6 +12,7 @@ bin/
 tmp/
 *.tmp
 *.bak
+*.log
 *.swp
 *~.nib
 local.properties
