@@ -1,4 +1,5 @@
 /nbproject/private/
+<<<<<<< HEAD
 /assets/
 #################
 ## Eclipse
@@ -169,3 +170,7 @@ pip-log.txt
 *.sublime-project
 *.sublime-workspace
 .gitignore
+=======
+/protected/runtime/
+/assets/
+>>>>>>> master

@@ -6,11 +6,11 @@
 .navbar-inverse .navbar-inner {
   
   background-color: #468847;
-  background-image: -moz-linear-gradient(top, #468847, #409647);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#468847), to(#409647));
-  background-image: -webkit-linear-gradient(top, #468847, #409647);
-  background-image: -o-linear-gradient(top, #468847, #409647);
-  background-image: linear-gradient(to bottom, #468847, #409647);
+  background-image: -moz-linear-gradient(top, #468847, rgb(106, 189, 113));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#468847), to(rgb(106, 189, 113)));
+  background-image: -webkit-linear-gradient(top, #468847, rgb(106, 189, 113));
+  background-image: -o-linear-gradient(top, #468847, rgb(106, 189, 113));
+  background-image: linear-gradient(to bottom, #468847, rgb(106, 189, 113));
   background-repeat: repeat-x;
   border-color: #468847;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff468847', endColorstr='#ff409647', GradientType=0);
@@ -62,11 +62,11 @@ ul.yiiPager > li > a{
 
 ul.yiiPager .selected a {
   background-color: #468847;
-  background-image: -moz-linear-gradient(top, #468847, #409647);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#468847), to(#409647));
-  background-image: -webkit-linear-gradient(top, #468847, #409647);
-  background-image: -o-linear-gradient(top, #468847, #409647);
-  background-image: linear-gradient(to bottom, #468847, #409647);
+  background-image: -moz-linear-gradient(top, #468847, rgb(106, 189, 113));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#468847), to(rgb(106, 189, 113)));
+  background-image: -webkit-linear-gradient(top, #468847, rgb(106, 189, 113));
+  background-image: -o-linear-gradient(top, #468847, rgb(106, 189, 113));
+  background-image: linear-gradient(to bottom, #468847, rgb(106, 189, 113));
   background-repeat: repeat-x;
   border-color: #468847;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff468847', endColorstr='#ff409647', GradientType=0);

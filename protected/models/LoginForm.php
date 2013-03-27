@@ -50,7 +50,11 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrecto Nombre de usuario o Contaseña');
+                                Yii::app()->user->setFlash("error", "Combinacion Usuario y Contraseña Incorrecto");
+				/*$this->addError('password','<div class="alert alert-error">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <strong>Oh snap!</strong> Change a few things up and try submitting again.
+</div>');*/
 		}
 	}
 

@@ -5,14 +5,14 @@
 
 .navbar-inverse .navbar-inner {
   
-  background-color: #1d2e7b;
-  background-image: -moz-linear-gradient(top, #1d2e7b, #3a4a8c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d2e7b), to(#3a4a8c));
-  background-image: -webkit-linear-gradient(top, #1d2e7b, #3a4a8c);
-  background-image: -o-linear-gradient(top, #1d2e7b, #3a4a8c);
-  background-image: linear-gradient(to bottom, #1d2e7b, #3a4a8c);
+  background-color: rgb(79, 111, 255);
+  background-image: -moz-linear-gradient(top, rgb(79, 111, 255), #3a4a8c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(79, 111, 255)), to(#3a4a8c));
+  background-image: -webkit-linear-gradient(top, rgb(79, 111, 255), #3a4a8c);
+  background-image: -o-linear-gradient(top, rgb(79, 111, 255), #3a4a8c);
+  background-image: linear-gradient(to bottom, rgb(79, 111, 255), #3a4a8c);
   background-repeat: repeat-x;
-  border-color: #1d2e7b;
+  border-color: rgb(79, 111, 255);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff1d2e7b', endColorstr='#ff3a4a8c', GradientType=0);
 }
 
@@ -22,7 +22,7 @@
 }
 
 .navbar .operations > li > a {
-  color:#1d2e7b;
+  color:rgb(79, 111, 255);
 }
 
 .navbar-inverse .nav .active > a,
@@ -51,24 +51,24 @@
 }
 
 a, a:hover, .sidebar-nav ul > li > a, .sidebar-nav ul > li > a:hover, .summary-number {
-	color: #1d2e7b;
+	color: rgb(79, 111, 255);
 }
 
 ul.yiiPager > li > a{
-	color: #1d2e7b!important;
+	color: rgb(79, 111, 255)!important;
 	
 }
 
 ul.yiiPager .selected a {
-  background-color:#1d2e7b;
-  background-image: -moz-linear-gradient(top, #1d2e7b, #3a4a8c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d2e7b), to(#3a4a8c));
-  background-image: -webkit-linear-gradient(top, #1d2e7b, #3a4a8c);
-  background-image: -o-linear-gradient(top, #1d2e7b, #3a4a8c);
-  background-image: linear-gradient(to bottom, #1d2e7b, #3a4a8c);
+  background-color:rgb(79, 111, 255);
+  background-image: -moz-linear-gradient(top, rgb(79, 111, 255), #3a4a8c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(79, 111, 255)), to(#3a4a8c));
+  background-image: -webkit-linear-gradient(top, rgb(79, 111, 255), #3a4a8c);
+  background-image: -o-linear-gradient(top, rgb(79, 111, 255), #3a4a8c);
+  background-image: linear-gradient(to bottom, rgb(79, 111, 255), #3a4a8c);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff1d2e7b', endColorstr='#ff3a4a8c', GradientType=0);
   background-repeat: repeat-x;
-  border-color:#1D2E7B;
+  border-color:rgb(79, 111, 255);
   color:#DEDEDE !important;
   text-shadow:#CCCCCC 0 0 0;
   font-weight:bold;
