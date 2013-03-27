@@ -5,6 +5,11 @@ class PcucController extends Controller
 
 	public $layout='//layouts/column2';
 
+     public function actionDefault(){
+
+               
+                $this->render('default');
+		}
         
         public function actionIndex2(){
 

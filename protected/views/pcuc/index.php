@@ -10,13 +10,9 @@ $this->menu=array(
 );
 ?>
 
-
-<?php foreach ($pccas as $pcca) { ?> 
-    <h1> <small> <?php echo $pcca->PCCA_Nombre ?></small> </h1>
-
-
-    <?php
-    $pccis = pcci::model()->findAll("PCCA_Id=$pcca->PCCA_Id");
+ <?php
+    
+   $pccis = pcci::model()->findAll("PCCA_Id=$deporte");
 
     foreach ($pccis as $pcci) {
         $pccss = pccs::model()->findAll("PCCI_Id=$pcci->PCCI_Id");
@@ -32,9 +28,6 @@ $this->menu=array(
                     'title' => $pccs->pCCI->pCCT->PCCT_Nombre . "-" . $pccs->PCCS_Nombre,
                 ));
                 ?>
-
-
-
 
                 <table class="table table-striped table-hover table-bordered table-condensed">
                     <thead>
@@ -53,6 +46,7 @@ $this->menu=array(
 
                     <tbody>
                 <?php foreach ($pcucs as $data) { ?>
+                       
 
                             <tr class="alternar"  >
                                 <td><?php echo $data->PCUC_Id ?></td>
@@ -97,6 +91,6 @@ $this->menu=array(
     <?php } ?>
 
 
-<?php } ?>
+
 
 
