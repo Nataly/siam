@@ -10897,7 +10897,11 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/siam/themes/abound/img/icons/favicodn.ico
 ---
+<<<<<<< HEAD
 2013/03/27 20:27:37 [error] [php] Undefined variable: deporte (C:\xampp\htdocs\siam\protected\views\pcuc\index.php:15)
+=======
+2013/03/27 20:23:35 [error] [php] Undefined variable: deporte (C:\xampp\htdocs\siam\protected\views\pcuc\index.php:15)
+>>>>>>> origin/master
 Stack trace:
 #0 C:\xampp\htdocs\yii\framework\web\CController.php(869): PcucController->renderFile()
 #1 C:\xampp\htdocs\yii\framework\web\CController.php(782): PcucController->renderPartial()
@@ -10910,7 +10914,11 @@ Stack trace:
 #8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
 #9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #10 C:\xampp\htdocs\siam\index.php(13): CWebApplication->run()
+<<<<<<< HEAD
 REQUEST_URI=/siam/pcuc/
+=======
+REQUEST_URI=/siam/pcuc
+>>>>>>> origin/master
 in C:\xampp\htdocs\siam\protected\views\pcuc\index.php (15)
 in C:\xampp\htdocs\siam\protected\controllers\PcucController.php (38)
 in C:\xampp\htdocs\siam\index.php (13)
