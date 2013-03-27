@@ -11738,3 +11738,21 @@ REQUEST_URI=/siam/themes/abound/css/images/ui-icons_f9bd01_256x240.png
 HTTP_REFERER=http://localhost/siam/pcuc/index.html
 >>>>>>> oclean
 ---
+2013/03/27 16:05:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/css/images/ui-icons_217bc0_256x240.png"' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/css/images/ui-icons_217bc0_256x240.png
+HTTP_REFERER=http://localhost/siam/pcuc/index.html
+---
+2013/03/27 16:05:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/abound/css/images/ui-bg_glass_75_d0e5f5_1x400.png"' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siam\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siam/themes/abound/css/images/ui-bg_glass_75_d0e5f5_1x400.png
+HTTP_REFERER=http://localhost/siam/pcuc/index.html
+---
