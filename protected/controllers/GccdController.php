@@ -55,6 +55,17 @@ class GccdController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+        /**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionGrid()
+	{
+		$dataProvider=new CActiveDataProvider('Gccd');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
 
 	/**
 	 * Creates a new model.
