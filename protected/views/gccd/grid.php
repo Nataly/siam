@@ -9,31 +9,29 @@ $conn = new PDO(DB_DSN,DB_USER,DB_PASSWORD);
 // Tell the db that we use utf-8
 $conn->query("SET NAMES utf8");
 
-
 // Create the jqGrid instance
 $grid = new jqGridRender($conn);
 // Write the SQL Query
-$grid->SelectCommand = 'SELECT OrderID, OrderDate, CustomerID, EmployeeID, Freight, ShipName FROM orders';
+$grid->SelectCommand = 'SELECT OrderID, OrderDate, CustomerID, Freight, ShipName FROM orders';
 // set the ouput format to json
 $grid->dataType = 'json';
 // Let the grid create the model from SQL query
 $grid->setColModel();
 // Set the url from where we obtain the data
-$grid->setUrl('../../siam/protected/view/gccd/grid.html');
+$grid->setUrl('grid');
 // Set alternate background using altRows property
 $grid->setGridOptions(array(
     "rowNum"=>10,
     "sortname"=>"OrderID",
     "rowList"=>array(10,20,50),
     "height"=>'auto',
-    "footerrow"=>true,
-    "userDataOnFooter"=>true,
     "grouping"=>true,
     "groupingView"=>array(
-    	"groupField" => array('CustomerID', 'EmployeeID'),
-    	"groupColumnShow" => array(true, true),
-    	"groupText" =>array('<b> Client:{0}</b> Sum Freight: {Freight}', '<b>Employee: {0}</b> Sum Freight: {Freight}'),
-    	"groupSummary" => array(false, false)
+    	"groupField" => array('CustomerID'),
+    	"groupColumnShow" => array(true),
+    	"groupText" =>array('<b>{0}</b>'),
+    	"groupDataSorted" => true
+    	
     ) 
     ));
 // Change some property of the field(s)
@@ -43,10 +41,7 @@ $grid->setColProperty("OrderDate", array(
     "formatoptions"=>array("srcformat"=>"Y-m-d H:i:s","newformat"=>"m/d/Y")
     )
 );
-// Add a summary property to the Freight Column
-$grid->setColProperty("Freight", array("summaryType"=>"sum", "summaryTpl"=>"{0}", "formatter"=>"number"));
-$summaryrows = array("Freight"=>array("Freight"=>"SUM"));
 // Enjoy
-$grid->renderGrid('#grid','#pager',true, $summaryrows, null, true,true);
+$grid->renderGrid('#grid','#pager',true, null, null, true,true);
 $conn = null;
 ?>
