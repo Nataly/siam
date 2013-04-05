@@ -4,7 +4,6 @@
  * This is the model class for table "pcui".
  *
  * The followings are the available columns in table 'pcui':
- * @property integer $pcui_id
  * @property integer $PCUC_Id
  * @property integer $PCCN_IdH
  * @property integer $PCCN_IdA
@@ -42,11 +41,11 @@ class pcui extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pcui_id, PCUC_Id, PCCN_IdH, PCCN_IdA', 'required'),
-			array('pcui_id, PCUC_Id, PCCN_IdH, PCCN_IdA', 'numerical', 'integerOnly'=>true),
+			array('PCUC_Id, PCCN_IdH, PCCN_IdA', 'required'),
+			array('PCUC_Id, PCCN_IdH, PCCN_IdA', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('pcui_id, PCUC_Id, PCCN_IdH, PCCN_IdA', 'safe', 'on'=>'search'),
+			array('PCUC_Id, PCCN_IdH, PCCN_IdA', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,7 +69,6 @@ class pcui extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'pcui_id' => 'Pcui',
 			'PCUC_Id' => 'Pcuc',
 			'PCCN_IdH' => 'Pccn Id H',
 			'PCCN_IdA' => 'Pccn Id A',
@@ -88,7 +86,6 @@ class pcui extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('pcui_id',$this->pcui_id);
 		$criteria->compare('PCUC_Id',$this->PCUC_Id);
 		$criteria->compare('PCCN_IdH',$this->PCCN_IdH);
 		$criteria->compare('PCCN_IdA',$this->PCCN_IdA);
