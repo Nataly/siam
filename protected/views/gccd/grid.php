@@ -1,9 +1,9 @@
 <?php
 require_once 'jq-config.php';
 // include the jqGrid Class
-require_once "php/jqGrid.php";
+require_once ABSPATH."php/jqGrid.php";
 // include the driver class
-require_once "php/jqGridPdo.php";
+require_once ABSPATH."php/jqGridPdo.php";
 // Connection to the server
 $conn = new PDO(DB_DSN,DB_USER,DB_PASSWORD);
 // Tell the db that we use utf-8
@@ -12,7 +12,7 @@ $conn->query("SET NAMES utf8");
 // Create the jqGrid instance
 $grid = new jqGridRender($conn);
 // Write the SQL Query
-$grid->SelectCommand = 'SELECT OrderID, OrderDate, CustomerID, Freight, ShipName FROM orders';
+$grid->SelectCommand = 'SELECT OrderID, OrderDate, CustomerID, EmployeeID, Freight, ShipName FROM orders';
 // set the ouput format to json
 $grid->dataType = 'json';
 // Let the grid create the model from SQL query
@@ -25,13 +25,14 @@ $grid->setGridOptions(array(
     "sortname"=>"OrderID",
     "rowList"=>array(10,20,50),
     "height"=>'auto',
+    "footerrow"=>true,
+    "userDataOnFooter"=>true,
     "grouping"=>true,
     "groupingView"=>array(
-    	"groupField" => array('CustomerID'),
-    	"groupColumnShow" => array(true),
-    	"groupText" =>array('<b>{0}</b>'),
-    	"groupDataSorted" => true
-    	
+    	"groupField" => array('CustomerID', 'EmployeeID'),
+    	"groupColumnShow" => array(true, true),
+    	"groupText" =>array('<b> Client:{0}</b>', '<b>Employee: {0}</b>'),
+    	"groupSummary" => array(false, false)
     ) 
     ));
 // Change some property of the field(s)
@@ -41,7 +42,10 @@ $grid->setColProperty("OrderDate", array(
     "formatoptions"=>array("srcformat"=>"Y-m-d H:i:s","newformat"=>"m/d/Y")
     )
 );
+// Add a summary property to the Freight Column
+$grid->setColProperty("Freight", array("formatter"=>"number"));
+$summaryrows = array("Freight"=>array("Freight"=>"SUM"));
 // Enjoy
-$grid->renderGrid('#grid','#pager',true, null, null, true,true);
+$grid->renderGrid('#grid','#pager',true, $summaryrows, null, true,true);
 $conn = null;
 ?>
