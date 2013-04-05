@@ -38,12 +38,6 @@
 		<?php echo $form->error($model_pcud,'PCUU_Id'); ?>
 	</div>
 	
-    
-    
-<?php  
-echo CHtml::radioButtonList( 'cars','4', array(4 => 'Manual', 5 => 'Automatico'), array('separator' => '',
-        'onChange'=>CHtml::ajax(array('type'=>'GET', 'url'=>array("pcuc/configuracion"), 
-        'update'=>'#data')))); ?>
 
 <?php $this->endWidget(); ?>
 

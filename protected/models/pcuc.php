@@ -14,6 +14,7 @@ class pcuc extends CActiveRecord {
     /**
      * @return string the associated database table name
      */
+    public $fecha;
     public function tableName() {
         return 'pcuc';
     }
