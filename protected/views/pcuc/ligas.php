@@ -36,7 +36,7 @@ foreach ($pccis as $pcci) {
                     'active' => 9999,
                     'autoHeight' => false,
 
-                ),'cssFile'=>'xjquery-ui.css',
+                )
             ));
             ?>
         <?php } 
