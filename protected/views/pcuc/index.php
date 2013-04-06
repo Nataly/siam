@@ -1,13 +1,13 @@
 <?php
 $this->menu = array(
-    array('label' => 'Agregar Eventos', 'url' => array('pcuc/agregarEvento'), 'itemOptions' => array('style' => 'width:268px; top:140px;position:fixed;')),
+    array('label' => 'Agregar Eventos', 'url' => array('pcuc/agregarEvento'), 'itemOptions' => array('style' => 'width:236px; top:140px;position:fixed;')),
 );
 ?>
 <div class="page-header">
     <h1>Eventos <small>del dia <?php echo $model_pcuc->PCUC_Tiempo = $fecha; ?></small></h1>
 </div>
 
-<div style=" margin-left: 600px;">  
+<div style=" margin-left: 55%;">  
     <?php
     $form = $this->beginWidget('CActiveForm');
     ?>
@@ -26,8 +26,9 @@ $this->menu = array(
             'constrainInput' => true,
             'currentText' => 'Now',
             'dateFormat' => 'dd/mm/yy',
-        ),
+        ),'cssFile'=>'jquery-ui.css',
         'htmlOptions' => array(
+
         ),
     ));
     ?>
@@ -43,7 +44,7 @@ $this->menu = array(
 
 
 <div class="row-fluid">
-    <div class="span6">
+    <div class="span61">
 
         <?php
         $this->widget('zii.widgets.jui.CJuiAccordion', array(
@@ -58,7 +59,8 @@ $this->menu = array(
             ),
             // additional javascript options for the accordion plugin
             'htmlOptions' => array(
-                'style' => 'width:900px;',
+                
+                'style' => 'width:100%;font-size:18px',
             ),
             'options' => array(
                 'animated' => 'bounceslide',
