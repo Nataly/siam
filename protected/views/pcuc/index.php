@@ -58,14 +58,8 @@ $this->menu = array(
                 'Ice Hockey' => $this->renderPartial('ligas', array('deporte' => 2, 'fecha' => $fecha), true),
             ),
             // additional javascript options for the accordion plugin
-            'htmlOptions' => array(
-<<<<<<< HEAD
-                'style' => 'width:900px;'
-=======
-                
-                'style' => 'width:100%;font-size:18px',
->>>>>>> 90d4dda0a04968f87eeead4fe184e672776117ee
-            ),
+            'htmlOptions' => array(                
+                'style' => 'width:100%;font-size:18px',            ),
             'options' => array(
                 'animated' => 'bounceslide',
                 'collapsible' => true,
