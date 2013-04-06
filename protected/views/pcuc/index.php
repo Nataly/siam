@@ -58,7 +58,7 @@ $this->menu = array(
             ),
             // additional javascript options for the accordion plugin
             'htmlOptions' => array(
-                'style' => 'width:900px;',
+                'style' => 'width:900px;'
             ),
             'options' => array(
                 'animated' => 'bounceslide',
