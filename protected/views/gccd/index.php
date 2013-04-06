@@ -13,8 +13,13 @@ $this->menu=array(
 ?>
 
 <h1>Grupos del Sistema</h1>
-<?php include ("grid.php");?>
-<?php /*$this->widget('zii.widgets.CListView', array(
+<?php
+
+ /*include ("grid.php"); */
+$this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
-)); */?>
+)); 
+
+
+             ?>
