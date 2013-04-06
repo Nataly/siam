@@ -28,14 +28,15 @@ foreach ($pccis as $pcci) {
                 ),
                 // additional javascript options for the accordion plugin
                 'htmlOptions' => array(
-                    'style' => 'width:800px;',
+                    'style' => 'width:100%;  font-size:12px',
                 ),
                 'options' => array(
                     'animated' => 'bounceslide',
                     'collapsible' => true,
                     'active' => 9999,
                     'autoHeight' => false,
-                ),
+
+                )
             ));
             ?>
         <?php } 
