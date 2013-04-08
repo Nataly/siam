@@ -1,6 +1,6 @@
 <?php
 $this->menu = array(
-    array('label' => 'Agregar Eventos', 'url' => array('pcuc/agregarEvento'), 'itemOptions' => array('style' => 'width:236px; top:140px;position:fixed;')),
+    array('label' => 'Agregar Eventos', 'url' => array('pcuc/agregarEvento')),
 );
 ?>
 <div class="page-header">

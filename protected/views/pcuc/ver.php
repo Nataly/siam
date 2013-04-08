@@ -3,6 +3,7 @@
 $this->menu = array(
     array('label' => 'Agregar Logro', 'url' => array('create')),
     array('label' => 'Regresar', 'url' => array('index')),
+    
 );
 
 if ($pcuc->PCUC_Estado == "pro") {
@@ -44,20 +45,20 @@ if ($pcui !== null) {
 </div>
 
 
-    <?php $form = $this->beginWidget('CActiveForm'); ?>
+<?php $form = $this->beginWidget('CActiveForm'); ?>
 
-    <div style="margin-left: 700px">
-        <?php echo $form->labelEx($model_pcui, 'Configraci&oacuten'); ?>
-        <?php
-        echo $form->radioButtonList($model_pcui, 'PCUC_Id', array('0' => 'Manual', '1' => 'Automatico'), array('separator' => '  ', 'labelOptions' => array('style' => 'display:inline'),
-            'onclick' => 'this.form.submit()'
-        ));
-        ?>
-    </div>
-
+<div style=" margin-left: 55%;">
+    <?php echo $form->labelEx($model_pcui, 'Configraci&oacuten'); ?>
     <?php
-    $this->endWidget();
+    echo $form->radioButtonList($model_pcui, 'PCUC_Id', array('0' => 'Manual', '1' => 'Automatico'), array('separator' => '  ', 'labelOptions' => array('style' => 'display:inline'),
+        'onclick' => 'this.form.submit()'
+    ));
     ?>
+</div>
+
+<?php
+$this->endWidget();
+?>
 
 
 <?php
@@ -87,6 +88,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array('name' => 'ResulH', 'header' => 'ResulH'),
         array('name' => 'ResulA', 'header' => 'ResulA'),
     ),
+    'htmlOptions' => array(                
+                'style' => 'width:100%',),
 ));
 ?>
 

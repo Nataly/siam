@@ -1,7 +1,7 @@
 <?php setlocale(LC_ALL, "es_ES@euro", "es_ES", "esp"); ?>
 <table class="table table-striped table-hover table-bordered table-condensed">
     <thead>
-        <tr >
+        <tr>
 
             <th>Codigo</th>
             <th>Tempo</th>
@@ -24,7 +24,7 @@
                     <td><?php echo $data->pCCNIdH->PCCN_Nombre; ?></td>
                     <td><?php echo $data->pCCNIdA->PCCN_Nombre; ?></td>
 
-        <?php if ($data->PCUC_Estado == "pro") { ?>
+        <?php if($data->PCUC_Estado == "pro") { ?>
                         <td><?php echo "PROGRAMADO"; ?></td>
                     <?php } ?>
 
@@ -42,9 +42,9 @@
 
                     <?php $pcui = pcui::model()->find("PCUC_Id = " . $data->PCUC_Id . "");
                     if ($pcui !== null) { ?>
-                        <td  ><?php echo "Manual" ?></td>
+                        <td><?php echo "Manual" ?></td>
                     <?php } else { ?>
-                        <td  ><?php echo "Automatico" ?></td>
+                        <td><?php echo "Automatico" ?></td>
                     <?php } ?>
                         <td><span class="badge badge-info"><?php echo CHtml::link('Ver', array('ver', 'id' => $data->PCUC_Id),array("style"=>"color:white;")) ?></span></td>
                 </tr>
