@@ -68,7 +68,7 @@ class Gccd extends CActiveRecord
 		return array(
 			'gccas' => array(self::HAS_MANY, 'Gcca', 'GCCD_Id'),
 			'gCCDIdSuperior' => array(self::BELONGS_TO, 'Gccd', 'GCCD_IdSuperior'),
-			'gccds' => array(self::HAS_MANY, 'Gccd', 'GCCD_IdSuperior'),
+			'gccds' => array(self::HAS_MANY, 'Gccd', 'GCCD_IdSuperior', 'order' => 'id ASC'),
 			'gCCU' => array(self::BELONGS_TO, 'Gccu', 'GCCU_Id'),
 			'gccis' => array(self::HAS_MANY, 'Gcci', 'GCCD_Id'),
 			'gccos' => array(self::HAS_MANY, 'Gcco', 'GCCD_Id'),
