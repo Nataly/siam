@@ -254,6 +254,7 @@ text-align: center !important;
 
 .sidebar-nav ul li{
   list-style: none;
+  width: 236px;
 }
 
 .sidebar-nav ul > li > a, .sidebar-nav ul > li > a:hover, .sidebar-nav ul > li > span {

@@ -13,13 +13,19 @@ $this->menu=array(
 ?>
 
 <h1>Grupos del Sistema</h1>
-<?php
+<h2>TreeView</h2>
 
- /*include ("grid.php"); */
-$this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); 
+<?php $this->widget('CTreeView',
+	array(
+		'data'=>$data,
+		'animated'=>'normal',
+		'collapsed'=>true,
+		'htmlOptions'=>array('class'=>'treeview-gray'))); ?>
 
+<h2>TreeView Async</h2>
 
-             ?>
+<?php $this->widget('CTreeView',
+	array(
+		'url'=>array('treeFill'),
+		'animated'=>'normal',
+		'htmlOptions'=>array('class'=>'treeview-red'))); ?>
