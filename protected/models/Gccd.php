@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'gccd':
  * @property integer $GCCD_Id
+ * @property string $GCCD_Cod
  * @property string $GCCD_Nombre
  * @property integer $GCCD_IdSuperior
  * @property integer $GCCU_Id
@@ -17,7 +18,6 @@
  * @property Gccd[] $gccds
  * @property Gccu $gCCU
  * @property Gcci[] $gccis
- * @property Gcco[] $gccos
  * @property Gcct[] $gccts
  */
 class Gccd extends CActiveRecord
@@ -48,13 +48,13 @@ class Gccd extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('GCCD_Id, GCCU_Id', 'required'),
-			array('GCCD_Id, GCCD_IdSuperior, GCCU_Id', 'numerical', 'integerOnly'=>true),
-			array('GCCD_Nombre, GCCD_Direccion', 'length', 'max'=>45),
+			array('GCCD_Cod, GCCU_Id', 'required'),
+			array('GCCD_IdSuperior, GCCU_Id', 'numerical', 'integerOnly'=>true),
+			array('GCCD_Cod, GCCD_Nombre, GCCD_Direccion', 'length', 'max'=>45),
 			array('GCCD_Telefono', 'length', 'max'=>30),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('GCCD_Id, GCCD_Nombre, GCCD_IdSuperior, GCCU_Id, GCCD_Telefono, GCCD_Direccion', 'safe', 'on'=>'search'),
+			array('GCCD_Id, GCCD_Cod, GCCD_Nombre, GCCD_IdSuperior, GCCU_Id, GCCD_Telefono, GCCD_Direccion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,10 +68,9 @@ class Gccd extends CActiveRecord
 		return array(
 			'gccas' => array(self::HAS_MANY, 'Gcca', 'GCCD_Id'),
 			'gCCDIdSuperior' => array(self::BELONGS_TO, 'Gccd', 'GCCD_IdSuperior'),
-			'gccds' => array(self::HAS_MANY, 'Gccd', 'GCCD_IdSuperior', 'order' => 'id ASC'),
+			'gccds' => array(self::HAS_MANY, 'Gccd', 'GCCD_IdSuperior'),
 			'gCCU' => array(self::BELONGS_TO, 'Gccu', 'GCCU_Id'),
 			'gccis' => array(self::HAS_MANY, 'Gcci', 'GCCD_Id'),
-			'gccos' => array(self::HAS_MANY, 'Gcco', 'GCCD_Id'),
 			'gccts' => array(self::HAS_MANY, 'Gcct', 'GCCD_Id'),
 		);
 	}
@@ -82,18 +81,19 @@ class Gccd extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'GCCD_Id' => 'Codigo',
-			'GCCD_Nombre' => 'Nombre',
-			'GCCD_IdSuperior' => 'Pertenece',
-			'GCCU_Id' => 'Agencia',
-			'GCCD_Telefono' => 'Telefono',
-			'GCCD_Direccion' => 'Dirección',
+			'GCCD_Id' => 'Gccd',
+			'GCCD_Cod' => 'Gccd Cod',
+			'GCCD_Nombre' => 'Gccd Nombre',
+			'GCCD_IdSuperior' => 'Gccd Id Superior',
+			'GCCU_Id' => 'Gccu',
+			'GCCD_Telefono' => 'Gccd Telefono',
+			'GCCD_Direccion' => 'Gccd Direccion',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
@@ -103,6 +103,7 @@ class Gccd extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('GCCD_Id',$this->GCCD_Id);
+		$criteria->compare('GCCD_Cod',$this->GCCD_Cod,true);
 		$criteria->compare('GCCD_Nombre',$this->GCCD_Nombre,true);
 		$criteria->compare('GCCD_IdSuperior',$this->GCCD_IdSuperior);
 		$criteria->compare('GCCU_Id',$this->GCCU_Id);

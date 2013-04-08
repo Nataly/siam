@@ -36,6 +36,8 @@
         ?>
         <!-- styles for style switcher -->
         <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/style-blue.css" />
+        <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/jquery.treeview.css" />
+
         <link rel="alternate stylesheet" type="text/css" media="screen" title="style2" href="<?php echo $baseUrl; ?>/css/style-brown.css" />
         <link rel="alternate stylesheet" type="text/css" media="screen" title="style3" href="<?php echo $baseUrl; ?>/css/style-green.css" />
         <link rel="alternate stylesheet" type="text/css" media="screen" title="style4" href="<?php echo $baseUrl; ?>/css/style-grey.css" />
@@ -53,6 +55,8 @@
         $cs->registerScriptFile($baseUrl . '/js/styleswitcher.js');
         $cs->registerScriptFile($baseUrl . '/js/jquery.js');
         $cs->registerScriptFile($baseUrl . '/js/grid.locale-es.js');
+         $cs->registerScriptFile($baseUrl . '/js/jquery.treeview.js');
+
         ?>
         <script type="text/javascript">
 	$.jgrid.no_legacy_api = true;

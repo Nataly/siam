@@ -16,37 +16,37 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Codigo'); ?>
-		<?php echo $form->textField($model,'Codigo'); ?>
-		<?php echo $form->error($model,'GCCD_Id'); ?>
+		<?php echo $form->labelEx($model,'GCCD_Cod'); ?>
+		<?php echo $form->textField($model,'GCCD_Cod',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'GCCD_Cod'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Nombre'); ?>
+		<?php echo $form->labelEx($model,'GCCD_Nombre'); ?>
 		<?php echo $form->textField($model,'GCCD_Nombre',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'GCCD_Nombre'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Pertenece'); ?>
+		<?php echo $form->labelEx($model,'GCCD_IdSuperior'); ?>
 		<?php echo $form->textField($model,'GCCD_IdSuperior'); ?>
 		<?php echo $form->error($model,'GCCD_IdSuperior'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Agencia'); ?>
-		<?php echo $form->dropDownList($model,'GCCU_Id',CHtml::ListData(gccu::model()->findAll(),'GCCU_Id','GCCU_Nombre')); ?>
+		<?php echo $form->labelEx($model,'GCCU_Id'); ?>
+		<?php echo $form->textField($model,'GCCU_Id'); ?>
 		<?php echo $form->error($model,'GCCU_Id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Telefono'); ?>
+		<?php echo $form->labelEx($model,'GCCD_Telefono'); ?>
 		<?php echo $form->textField($model,'GCCD_Telefono',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'GCCD_Telefono'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Direccion'); ?>
+		<?php echo $form->labelEx($model,'GCCD_Direccion'); ?>
 		<?php echo $form->textField($model,'GCCD_Direccion',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'GCCD_Direccion'); ?>
 	</div>

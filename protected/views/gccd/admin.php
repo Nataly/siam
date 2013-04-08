@@ -7,7 +7,6 @@ $this->breadcrumbs=array(
 	'Manage',
 );
 
-
 $this->menu=array(
 	array('label'=>'List Gccd', 'url'=>array('index')),
 	array('label'=>'Create Gccd', 'url'=>array('create')),
@@ -29,6 +28,10 @@ $('.search-form form').submit(function(){
 
 <h1>Manage Gccds</h1>
 
+<p>
+You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+</p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -43,11 +46,14 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'GCCD_Id',
+		'GCCD_Cod',
 		'GCCD_Nombre',
 		'GCCD_IdSuperior',
-		'gCCU.GCCU_Nombre',
+		'GCCU_Id',
 		'GCCD_Telefono',
+		/*
 		'GCCD_Direccion',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

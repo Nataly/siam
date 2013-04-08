@@ -5,8 +5,12 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('COD')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->GCCD_Cod), array('view', 'id'=>$data->GCCD_Id)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('GCCD_Id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->GCCD_Id), array('view', 'id'=>$data->GCCD_Id)); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('GCCD_Cod')); ?>:</b>
+	<?php echo CHtml::encode($data->GCCD_Cod); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('GCCD_Nombre')); ?>:</b>
@@ -18,7 +22,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('GCCU_Id')); ?>:</b>
-	<?php echo CHtml::encode($data->gCCU->GCCU_Nombre); ?>
+	<?php echo CHtml::encode($data->GCCU_Id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('GCCD_Telefono')); ?>:</b>
@@ -31,5 +35,3 @@
 
 
 </div>
-
-
