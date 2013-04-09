@@ -21,7 +21,7 @@ class GccdController extends Controller {
             $aux = '<ul>';
             foreach ($gccds as $data) {
                 // $aux =  $aux .$data->GCCD_Cod;  $aux = $aux.'</br>';
-                $aux = $aux . '<li class="expandable"><span class="group"><a href="#" title="Cargar contenido" style="text-decoration: none;">' . $data->GCCD_Cod . ' | ' . $data->GCCD_Nombre . '</a></span>';
+                $aux = $aux . '<li class="expandable"><span class="group" id=' . $data->GCCD_Id . '>' . $data->GCCD_Cod . ' | ' . $data->GCCD_Nombre . '</span>';
                 $aux = $aux. $this->hijos($data->GCCD_Id);
                 $aux = $aux .'</li>';
             }
@@ -81,7 +81,7 @@ class GccdController extends Controller {
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
-    public function actionCreate() {
+    public function actionCreate($id) {
         $model = new Gccd;
 
         // Uncomment the following line if AJAX validation is needed
@@ -94,7 +94,7 @@ class GccdController extends Controller {
         }
 
         $this->render('create', array(
-            'model' => $model,
+            'model' => $model,'id' => $id,
         ));
     }
 
@@ -137,20 +137,18 @@ class GccdController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $aux = ' ';
-        $arbol = '
-
-    <ul id="browser" class="filetree treeview-famfamfam">';
+        //$aux = ' ';
+        $arbol = '<ul id="browser" class="filetree treeview-famfamfam">';
 
         $gccds = gccd::model()->findAll("GCCD_IdSuperior is NULL");
         foreach ($gccds as $data) {
             //$arbol = $arbol . '<li class="closed"><span class="banca"><a href="#" style="text-decoration: none;">' . $data->GCCD_Cod . ' | ' . $data->GCCD_Nombre . '</a></span>';
-            $arbol = $arbol . '<li class="closed"><span class="group"><a href="#" title="Cargar contenido" style="text-decoration: none;">' . $data->GCCD_Cod . ' | ' . $data->GCCD_Nombre . '</a></span>';
+            $arbol = $arbol . '<li class="closed"><span class="group" id=' . $data->GCCD_Id . '>' . $data->GCCD_Cod . ' | ' . $data->GCCD_Nombre . '</span>';
 
             //$arbol = $arbol . '<ul>';
             $arbol = $arbol . $this->hijos($data->GCCD_Id);
             $arbol = $arbol . '</li>';
-            $aux = $aux . $this->hijos($data->GCCD_Id);
+            //$aux = $aux . $this->hijos($data->GCCD_Id);
         }
 
 
@@ -158,7 +156,7 @@ class GccdController extends Controller {
 
 
 //-----------------------------------------------------------------------------
-        $this->render('index', array('arbol' => $arbol, 'aux' => $aux));
+        $this->render('index', array('arbol' => $arbol));
     }
 
     /**

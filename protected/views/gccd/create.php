@@ -3,16 +3,22 @@
 /* @var $model Gccd */
 
 $this->breadcrumbs=array(
-	'Gccds'=>array('index'),
-	'Create',
+	'Grupos'=>array('index'),
+	'Crear Grupo',
 );
 
 $this->menu=array(
-	array('label'=>'List Gccd', 'url'=>array('index')),
-	array('label'=>'Manage Gccd', 'url'=>array('admin')),
+	array('label'=>'Arbol de Grupos', 'url'=>array('index')),
+	array('label'=>'Administrar Grupos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Gccd</h1>
+<h1>Crear Grupo </h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $model->GCCD_IdSuperior = $_GET['id'];
+
+echo $this->renderPartial('_form', array('model'=>$model )); 
+echo $this->renderPartial('_form', array('model'=>$model ));
+echo $this->renderPartial('_form', array('model'=>$model ));
+
+?>

@@ -77,3 +77,10 @@
 .filetree li.expandable span.group { background: url(../img/groups.png) 0 0 no-repeat; }
 
 .filetree span.agencia { background: url(../img/monitor.png) 0 0 no-repeat; }
+
+.filetree .new { background: url(../img/new.png) 8px 0 no-repeat; }
+.filetree .new { padding: 1px 0 0 25px; display: initial; font-weight: bold;}
+
+.filetree .edit { background: url(../img/edit.png) 8px 0 no-repeat; }
+.filetree .edit { padding: 1px 0 0 25px; display: initial; font-weight: bold;}
+
