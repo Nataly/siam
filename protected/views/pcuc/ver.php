@@ -1,9 +1,8 @@
 
 <?php
 $this->menu = array(
-    array('label' => 'Agregar Logro', 'url' => array('create')),
+    array('label' => 'Agregar Logro', 'url' => array('agregarLogro', 'id'=>$pcuc->PCUC_Id, 'deporte'=>$deporte)),
     array('label' => 'Regresar', 'url' => array('index')),
-    
 );
 
 if ($pcuc->PCUC_Estado == "pro") {
@@ -60,6 +59,28 @@ if ($pcui !== null) {
 $this->endWidget();
 ?>
 
+<?php if ($guardo == 0) { ?>
+    <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Guardado!</strong> Configuración del evento con logros Manuales.
+    </div> 
+<?php } else if ($guardo == 1) { ?>
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Error!</strong> .
+    </div>
+<?php } else if ($guardo == 2) { ?>
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Eliminado!</strong> Configuración del evento con logros Automaticos.
+    </div>
+<?php } else if ($guardo == 3) { ?>
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Error!</strong> .
+    </div>
+<?php } ?>
+
 
 <?php
 $gridDataProvider = new CArrayDataProvider(array(
@@ -88,33 +109,62 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array('name' => 'ResulH', 'header' => 'ResulH'),
         array('name' => 'ResulA', 'header' => 'ResulA'),
     ),
-    'htmlOptions' => array(                
-                'style' => 'width:100%',),
+    'htmlOptions' => array(
+        'style' => 'width:100%',),
 ));
 ?>
-
 <?php
 $this->endWidget();
 ?>
-<?php if ($guardo == 0) { ?>
-    <div class="alert alert-info">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>Guardado!</strong> Configuración del evento con logros Manuales.
-    </div> 
-<?php } else if ($guardo == 1) { ?>
-    <div class="alert alert-error">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>Error!</strong> .
-    </div>
-<?php } else if ($guardo == 2) { ?>
-    <div class="alert alert-success">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>Eliminado!</strong> Configuración del evento con logros Automaticos.
-    </div>
-<?php } else if ($guardo == 3) { ?>
-    <div class="alert alert-error">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>Error!</strong> .
-    </div>
-<?php } ?>
 
+<?php
+$this->beginWidget('zii.widgets.CPortlet', array(
+    'title' => "Logros Manuales",
+));
+?>
+<?php setlocale(LC_ALL, "es_ES@euro", "es_ES", "esp"); ?>
+<table class="table table-striped table-hover table-bordered table-condensed">
+    <thead>
+        <tr>
+
+            <th>Equipo</th>
+            <th>Hora</th>
+            <th>A Ganar</th>
+            <th>Runline</th>
+            <th>Alta/Baja</th>
+            <th>A Ganar 1/2</th>
+            <th>Runline 1/2</th>
+            <th>Alta/Baja 1/2</th>
+            <th>SI/NO</th>
+        </tr>      
+    </thead>
+
+    <tbody>
+        <tr class="alternar"  >
+            <td>Equipo 1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>   
+        </tr>
+        <tr class="alternar"  >
+            <td>Equipo 2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>   
+        </tr>
+
+    </tbody>
+</table>  
+<?php
+$this->endWidget();
+?>

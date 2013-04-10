@@ -1,8 +1,7 @@
-<?php setlocale(LC_ALL, "es_ES@euro", "es_ES", "esp"); ?>
+<?php setlocale(LC_ALL, "es_ES@euro", "es_ES", "esp");?>
 <table class="table table-striped table-hover table-bordered table-condensed">
     <thead>
         <tr>
-
             <th>Codigo</th>
             <th>Tempo</th>
             <th>EquipoH</th>
@@ -46,7 +45,7 @@
                     <?php } else { ?>
                         <td><?php echo "Automatico" ?></td>
                     <?php } ?>
-                        <td><span class="badge badge-info"><?php echo CHtml::link('Ver', array('ver', 'id' => $data->PCUC_Id),array("style"=>"color:white;")) ?></span></td>
+                        <td><span class="badge badge-info"><?php echo CHtml::link('Ver', array('ver', 'id' => $data->PCUC_Id,'deporte'=>$deporte),array("style"=>"color:white;")) ?></span></td>
                 </tr>
     <?php }
 } ?>

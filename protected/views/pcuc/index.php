@@ -40,12 +40,6 @@ $this->menu = array(
     ?>
    
 </div>
-
-
-
-<div class="row-fluid">
-    <div class="span61">
-
         <?php
         $this->widget('zii.widgets.jui.CJuiAccordion', array(
             'panels' => array(
@@ -68,18 +62,3 @@ $this->menu = array(
             ),
         ));
         ?>
-
-    </div>
-</div>
-
- <?php
-    
-	$this->widget('zii.widgets.jui.CJuiButton', array(
-		'name'=>'button2',
-		'caption'=>'Save',
-		'value'=>'asd1',
-		'htmlOptions'=>array('class'=>'btn btn-primary'),
-		'onclick'=>new CJavaScriptExpression('function(){alert("Save button has been clicked"); this.blur(); return false;}'),
-	));
-	
-	?>

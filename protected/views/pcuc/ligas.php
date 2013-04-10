@@ -24,7 +24,7 @@ foreach ($pccis as $pcci) {
             <?php
             $this->widget('zii.widgets.jui.CJuiAccordion', array(
                 'panels' => array(
-                    $pccs->pCCI->pCCT->PCCT_Nombre . "-" . $pccs->PCCS_Nombre => $this->renderPartial('eventos', array('pcucs' => $pcucs, 'fecha'=>$fecha), true),
+                    $pccs->pCCI->pCCT->PCCT_Nombre . "-" . $pccs->PCCS_Nombre => $this->renderPartial('eventos', array('pcucs' => $pcucs, 'fecha'=>$fecha, 'deporte'=>$deporte), true),
                 ),
                 // additional javascript options for the accordion plugin
                 'htmlOptions' => array(
