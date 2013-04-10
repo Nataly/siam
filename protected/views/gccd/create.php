@@ -18,7 +18,6 @@ $this->menu=array(
 <?php $model->GCCD_IdSuperior = $_GET['id'];
 
 echo $this->renderPartial('_form', array('model'=>$model )); 
-echo $this->renderPartial('_form', array('model'=>$model ));
-echo $this->renderPartial('_form', array('model'=>$model ));
+
 
 ?>
