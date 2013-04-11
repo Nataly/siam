@@ -12,24 +12,13 @@ $this->beginWidget('zii.widgets.CPortlet', array(
 ?>
 <?php setlocale(LC_ALL, "es_ES@euro", "es_ES", "esp"); ?>
 <?php $form = $this->beginWidget('CActiveForm'); 
-//foreach
-$z = 3;
-echo $this->renderPartial('_logro', array('model'=>$model,'e'=>1 )); ?>
+echo $this->renderPartial('_logro', array('model'=>$model )); ?>
+    
+  
+    <?php echo CHtml::submitButton('Guardar'); ?>
+    <?php $this->endWidget(); ?>
 
-<?php $this->endWidget(); ?>
 
-<?php echo CHtml::submitButton('Guardar'); ?>
-<input type="button"  id ="enviar" class="enviar" onclick="enviar()">
 <?php
 $this->endWidget();
 ?>
-<script type="text/javascript" >
-
-function enviar(){
-   document.getElementById('yw1').submit();
-}
-
-
-
-</script>
-

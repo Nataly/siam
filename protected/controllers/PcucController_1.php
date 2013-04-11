@@ -19,7 +19,7 @@ class PcucController extends Controller {
         $model_pcud0 = new pcud;
         $model_pcud3 = new pcud;
         $model_pcud4 = new pcud;
-
+        
         $model_pcui = new pcui(); //creo el modelo para traerme la configuracion automativo o manual
         $pcuc = pcuc::model()->find("PCUC_Id = " . $id . "");
         $pcuds = pcud::model()->findAll("PCUC_Id = " . $id . "");
@@ -39,7 +39,7 @@ class PcucController extends Controller {
                     $model_pcui->PCCN_IdA = $pcuc->PCCN_IdA;
 
                     if ($model_pcui->save()) { //guardo en lista negra 
-                        $this->render('agregarLogro', array('model' => $model, 'pcuc' => $pcuc, 'deporte' => 1));
+                        $this->render('agregarLogro', array('model_pcud0' => $model_pcud0, 'model_pcud4' => $model_pcud4, 'model_pcud3' => $model_pcud3,'pcuc' => $pcuc, 'deporte' => 1));
                     } else { //si no pudo guardar en lista negra
                         $this->render('ver', array('pcuc' => $pcuc, 'pcuds' => $pcuds, 'pcud' => $pcud, 'model_pcui' => $model_pcui, 'guardo' => '1', 'deporte' => $deporte));
                     }
@@ -68,51 +68,49 @@ class PcucController extends Controller {
     }
 
     public function actionAgregarLogro($id, $deporte) {
-        $model = new pcud;
-
+        $model_pcud0 = new pcud;
+        $model_pcud3 = new pcud;
+        $model_pcud4 = new pcud;
+        $model_pcud36 = new pcud;
+        $model_pcud39 = new pcud;
+        $model_pcud40 = new pcud;
+        $model_pcud77 = new pcud;
 
         $pcuc = pcuc::model()->find("PCUC_Id = " . $id . "");
+        if (isset($_POST['pcud'][0]) && isset($_POST['pcud'][3]) && isset($_POST['pcud'][4]) && isset($_POST['pcud'][36]) && isset($_POST['pcud'][39]) && isset($_POST['pcud'][40]) && isset($_POST['pcud'][77]) ) {
+            $model_pcud0->attributes = $_POST['pcud'][0];
+            $model_pcud0->PCUD_Id = 0;
+            $model_pcud0->PCUU_Id = 0;
+            $model_pcud0->PCUC_Id = $pcuc->PCUC_Id;
+            $model_pcud0->PCCN_IdH = $pcuc->PCCN_IdH;
+            $model_pcud0->PCCN_IdA = $pcuc->PCCN_IdA;
+            $model_pcud0->PCUD_Tiempo = "2013-04-22 00-30-00";
 
-        if (isset($_POST['pcud'][1])) {
-            $model->attributes = $_POST['pcud'][1];
-            $model->PCUD_Id = 0;
-            $model->PCUU_Id = 0;
-            $model->PCUC_Id = $pcuc->PCUC_Id;
-            $model->PCCN_IdH = $pcuc->PCCN_IdH;
-            $model->PCCN_IdA = $pcuc->PCCN_IdA;
-            $model->PCUD_Tiempo = "2013-04-22 00-30-00";
-            if ($model->save()) {
+            $model_pcud3->attributes = $_POST['pcud'][3];
+            $model_pcud3->PCUD_Id = 0;
+            $model_pcud3->PCUU_Id = 3;
+            $model_pcud3->PCUC_Id = $pcuc->PCUC_Id;
+            $model_pcud3->PCCN_IdH = $pcuc->PCCN_IdH;
+            $model_pcud3->PCCN_IdA = $pcuc->PCCN_IdA;
+            $model_pcud3->PCUD_Tiempo = "2013-02-22 00-30-00";
+            
+            $model_pcud4->attributes = $_POST['pcud'][4];
+            $model_pcud4->PCUD_Id = 0;
+            $model_pcud4->PCUU_Id = 4;
+            $model_pcud4->PCUC_Id = $pcuc->PCUC_Id;
+            $model_pcud4->PCCN_IdH = $pcuc->PCCN_IdH;
+            $model_pcud4->PCCN_IdA = $pcuc->PCCN_IdA;
+            $model_pcud4->PCUD_Tiempo = "2013-02-22 00-30-00";
+            
 
-                if (isset($_POST['pcud'][2])) {
-                    $model->attributes = $_POST['pcud'][2];
-                    $model->PCUD_Id = 0;
-                    $model->PCUU_Id = 3;
-                    $model->PCUC_Id = $pcuc->PCUC_Id;
-                    $model->PCCN_IdH = $pcuc->PCCN_IdH;
-                    $model->PCCN_IdA = $pcuc->PCCN_IdA;
-                    $model->PCUD_Tiempo = "2013-04-22 00-30-00";
-                    if ($model->save()) {
+            if ($model_pcud4->save() && $model_pcud0->save() && $model_pcud3->save() ) {
+                $this->render('configuracion');
+            } else {
 
-                        if (isset($_POST['pcud'][3])) {
-
-                            $model->attributes = $_POST['pcud'][3];
-                            $model->PCUD_Id = 0;
-                            $model->PCUU_Id = 4;
-                            $model->PCUC_Id = $pcuc->PCUC_Id;
-                            $model->PCCN_IdH = $pcuc->PCCN_IdH;
-                            $model->PCCN_IdA = $pcuc->PCCN_IdA;
-                            $model->PCUD_Tiempo = "2013-04-22 00-30-00";
-
-
-                            if ($model->save()) {
-                                $this->render('configuracion');
-                            }
-                        }
-                    }
-                }
+                $this->render('agregarLogro', array('model_pcud0' => $model_pcud0, 'model_pcud3' => $model_pcud3, 'model_pcud4' => $model_pcud4, 'model_pcud36' => $model_pcud36, 'model_pcud39' => $model_pcud39, 'model_pcud40' => $model_pcud40, 'model_pcud77' => $model_pcud77, 'pcuc' => $pcuc, 'deporte' => $deporte));
             }
         } else {
-            $this->render('agregarLogro', array('model' => $model, 'pcuc' => $pcuc, 'deporte' => $deporte));
+            $this->render('agregarLogro', array('model_pcud0' => $model_pcud0, 'model_pcud3' => $model_pcud3, 'model_pcud4' => $model_pcud4, 'model_pcud36' => $model_pcud36, 'model_pcud39' => $model_pcud39, 'model_pcud40' => $model_pcud40, 'model_pcud77' => $model_pcud77, 'pcuc' => $pcuc, 'deporte' => $deporte));
         }
     }
 
